@@ -1,0 +1,38 @@
+create database dbTeste;
+
+use dbTeste;
+
+create table tabelab(nome varchar(50));
+
+create table tabelac(nome varchar(50));
+
+
+
+insert into tabelab values('Fernanda');
+
+insert into tabelab values('Josefa');
+
+insert into tabelab values('Luiz');
+
+insert into tabelab values('Fernando');
+
+
+
+insert into tabelac values('Carlos');
+
+insert into tabelac values('Manoel');
+
+insert into tabelac values('Luiz');
+
+insert into tabelac values('Fernando');
+
+
+select b.nome, c.nome from tabelab as b inner join tabelac as c on b.nome = c.nome; /*Compara os resultados iguais das tabelas, se igual ele mostra o resultado*/
+
+
+
+select b.nome, c.nome from tabelab as b left join tabelac as c on b.nome = c.nome; /*Replica o resultado do lado esquerdo no lado direito + resultados coincidentes com esquerdo*/
+
+
+
+select b.nome, c.nome from tabelab as b right join tabelac as c on b.nome = c.nome; /*Compara os resultados das duas tabelas, por não ser igual ao lado direito ele fica nulo*/
